@@ -8,5 +8,5 @@
 #SBATCH --time=01:00:00
 ulimit -s unlimited
 export OMP_NUM_THREADS=1
-srun -n 1 ./ascot5_main 
+srun ./ascot5_main 
 
