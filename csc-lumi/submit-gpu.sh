@@ -4,12 +4,12 @@
 #SBATCH --account=project_462000870
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8     # 8 MPI ranks per node, 16 total (2x8)
-#SBATCH --gpus-per-task=8       # Allocate one gpu per MPI rank
+#SBATCH --gpus-per-node=8       # Allocate one gpu per MPI rank
 #SBATCH --threads-per-core=1
 #SBATCH --exclusive
 #SBATCH --time=00:10:00
-#SBATCH -o ascot5-fildrun.%j.out
-#SBATCH -e ascot5-fildrun.%j.err
+#SBATCH -o ascot5.%j.out
+#SBATCH -e ascot5.%j.err
 #export CRAY_ACC_DEBUG=1
 #export HSAKMT_DEBUG_LEVEL=7
 export HSA_XNACK=1
