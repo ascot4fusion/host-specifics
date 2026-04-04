@@ -15,6 +15,7 @@
 module load .unsupported nvhpc/22.3
 
 export FOR_PRINT=$SLURM_JOB_ID.stdout
+export HDF5_USE_FILE_LOCKING=FALSE #Untested for gpu but this was needed for cpu
 
 echo Job name $SLURM_JOB_NAME
 echo Job id $SLURM_JOB_ID
